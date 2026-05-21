@@ -1,0 +1,20 @@
+# Tokens e credenciais
+.env
+.env.*
+*.pem
+*-credentials.json
+
+# Dados sensíveis (LGPD) — não commitar leads de clientes reais
+**/leads/*.csv
+**/leads/*.xlsx
+!**/leads/.gitkeep
+
+# Artefatos temporários
+.DS_Store
+node_modules/
+__pycache__/
+*.tmp
+*.bak
+
+# Pastas de clientes reais (cliente-piloto é o template público)
+clientes/

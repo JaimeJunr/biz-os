@@ -1,0 +1,16 @@
+# Tokens e credenciais nunca vão pro git
+.env
+.env.*
+*.pem
+*-credentials.json
+
+# Dados sensíveis de leads (LGPD)
+leads/*.csv
+leads/*.xlsx
+!leads/.gitkeep
+
+# Artefatos temporários
+.DS_Store
+node_modules/
+__pycache__/
+*.tmp
