@@ -9,6 +9,11 @@ leads/*.csv
 leads/*.xlsx
 !leads/.gitkeep
 
+# Inputs brutos podem ser pesados — versione só o que importa
+dados/transcricoes/*.mp4
+dados/transcricoes/*.mp3
+dados/transcricoes/*.wav
+
 # Artefatos temporários
 .DS_Store
 node_modules/

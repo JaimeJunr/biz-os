@@ -23,20 +23,20 @@ Briefing: **$ARGUMENTS**
 1. **Contexto obrigatório (nesta ordem):**
    - `.agents/product-marketing.md` — persona, voz, posicionamento
    - `CLAUDE.md` raiz — decisor, regras
-   - `branding/guidelines.md` — paleta, tipografia, voz visual
+   - `identidade/guidelines.md` — paleta, tipografia, voz visual
 
 2. **Roteie pelo `--modo`:**
    - Se não foi passado, infira do briefing e confirme com o usuário em 1 mensagem.
    - Delegue à skill primária do modo. Combine com a secundária quando útil.
 
 3. **Para `--modo=criar`:**
-   - Use `ui-ux-pro-max-skill` para escolher o estilo (entre os 67) que casa com `branding/guidelines.md`.
+   - Use `ui-ux-pro-max-skill` para escolher o estilo (entre os 67) que casa com `identidade/guidelines.md`.
    - Use `frontend-design` para gerar o código (HTML/React + Tailwind, evita estética AI genérica).
-   - Saída em `branding/components/<slug>/` (HTML + screenshot SVG).
+   - Saída em `identidade/components/<slug>/` (HTML + screenshot SVG).
 
 4. **Para `--modo=a11y`:**
    - Rode `accessibility-review` na URL/arquivo.
-   - Gere relatório em `branding/a11y/<slug>-AAAA-MM-DD.md` com:
+   - Gere relatório em `identidade/a11y/<slug>-AAAA-MM-DD.md` com:
      - Contrastes que falham (com valor calculado)
      - Targets táteis < 44px
      - Foco visível ausente

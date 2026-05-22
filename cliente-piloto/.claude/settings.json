@@ -17,6 +17,19 @@
     ],
     "deny": []
   },
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if [ ! -f \"$CLAUDE_PROJECT_DIR/_memoria/empresa.md\" ] || grep -q '\\[PENDENTE\\]' \"$CLAUDE_PROJECT_DIR/_memoria/empresa.md\" 2>/dev/null; then echo '🟡 biz-os: _memoria/empresa.md ainda está vazio ou com [PENDENTE]. Rode /instalar agora para fazer o onboarding (escolha de perfil + entrevista guiada).'; fi"
+          }
+        ]
+      }
+    ]
+  },
   "extraKnownMarketplaces": {
     "marketingskills": {
       "source": { "source": "github", "repo": "coreyhaines31/marketingskills" }

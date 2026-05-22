@@ -9,7 +9,7 @@ Alvo: **$ARGUMENTS**
 
 ## Passo a passo
 
-1. **Contexto:** `.agents/product-marketing.md` (foundation — todas as skills SEO do Corey leem isso), `CLAUDE.md` (operacional), `branding/guidelines.md` (tom).
+1. **Contexto:** `.agents/product-marketing.md` (foundation — todas as skills SEO do Corey leem isso), `CLAUDE.md` (operacional), `identidade/guidelines.md` (tom).
 
 2. **Delegue às skills do `coreyhaines31/marketingskills`:**
    - `seo-audit` — auditoria estrutural completa

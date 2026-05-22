@@ -9,7 +9,7 @@ Briefing: **$ARGUMENTS**
 
 ## Passo a passo
 
-1. **Contexto:** `CLAUDE.md`, `branding/guidelines.md`, `memory/historico/`.
+1. **Contexto:** `CLAUDE.md`, `identidade/guidelines.md`, `dados/historico/`.
 
 2. **Pergunte o que faltar:** orçamento diário, objetivo (leads/vendas/tráfego), pixel/CAPI ativo?, URL ou form, localização, idade/gênero do público.
 

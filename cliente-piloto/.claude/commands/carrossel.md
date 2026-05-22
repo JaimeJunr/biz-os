@@ -12,7 +12,7 @@ Tema/objetivo passado pelo usuário: **$ARGUMENTS**
 1. **Carregue contexto obrigatório (nesta ordem):**
    - `.agents/product-marketing.md` — fundamento (audiência, voz, proof points). Schema oficial usado por todas as skills do `coreyhaines31/marketingskills`.
    - `CLAUDE.md` raiz — camada operacional (decisor, regras, status).
-   - `branding/guidelines.md` — paleta, tipografia, exemplos visuais.
+   - `identidade/guidelines.md` — paleta, tipografia, exemplos visuais.
    - Último arquivo em `marketing/carrosseis/` como referência de estilo.
 
 2. **Delegue à skill `social`** do plugin `coreyhaines31/marketingskills` para a estrutura do roteiro (ela já está calibrada para Instagram/LinkedIn). Use a skill `copywriting` para refinar os títulos.
@@ -21,7 +21,7 @@ Tema/objetivo passado pelo usuário: **$ARGUMENTS**
    - Slides (default 8, range 6-10)
    - Objetivo: educar / vender / prova social / autoridade
    - CTA final
-   - Algum dado/número específico a usar? (NÃO invente — só use o que estiver em `memory/historico/`)
+   - Algum dado/número específico a usar? (NÃO invente — só use o que estiver em `dados/historico/`)
 
 4. **Estrutura padrão dos slides:**
    - Slide 1: gancho/dor (título grande)
@@ -35,7 +35,7 @@ Tema/objetivo passado pelo usuário: **$ARGUMENTS**
      - Roteiro slide-a-slide (título + corpo + nota de design)
      - Legenda do post (até 2200 chars) com 5-8 hashtags relevantes
      - 3 variações de primeiro comentário (pin)
-   - **HTML/SVG** em `marketing/carrosseis/YYYY-MM-DD-<slug>/` com 1 arquivo por slide (1080x1350), usando a skill `frontend-design` e a paleta de `branding/guidelines.md`.
+   - **HTML/SVG** em `marketing/carrosseis/YYYY-MM-DD-<slug>/` com 1 arquivo por slide (1080x1350), usando a skill `frontend-design` e a paleta de `identidade/guidelines.md`.
 
 5. **Checklist de qualidade antes de entregar:**
    - [ ] Tom de voz bate com `CLAUDE.md` seção 2?

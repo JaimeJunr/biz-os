@@ -11,8 +11,8 @@ Briefing: **$ARGUMENTS**
 
 1. **Carregue contexto:**
    - `CLAUDE.md` seções 1-3 (identidade, tom, produtos)
-   - `branding/guidelines.md`
-   - `memory/historico/numeros.md` para extensões de prova social
+   - `identidade/guidelines.md`
+   - `dados/historico/numeros.md` para extensões de prova social
 
 2. **Pergunte o que faltar:**
    - Orçamento diário
@@ -52,7 +52,7 @@ Briefing: **$ARGUMENTS**
    ```
 
 4. **Regras invioláveis:**
-   - Zero claim sem prova em `memory/historico/`.
+   - Zero claim sem prova em `dados/historico/`.
    - Respeitar políticas do Google Ads (sem superlativos não comprováveis, sem "garantia" em saúde/finanças sem disclaimer).
    - Negativas básicas sempre incluídas: "grátis", "free", "curso", "como fazer" (a menos que o produto seja curso).
    - LGPD: nunca incluir dado pessoal nos criativos.

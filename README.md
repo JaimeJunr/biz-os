@@ -96,7 +96,7 @@ Dentro de qualquer pasta de cliente, digite `/` no Claude Code:
 
 | Comando | Função |
 |---|---|
-| `/instalar` | Onboarding em 5 blocos (identidade, tom, produtos, provas, operação) |
+| `/instalar` | Onboarding interativo: escolhe perfil (solopreneur/freelancer/agência/empresa), entrevista guiada, popula `_memoria/` e adapta `CLAUDE.md` |
 | `/carrossel` | Carrossel Instagram on-brand (markdown + SVG) |
 | `/anuncio-google` | Campanha Google Ads + CSV uploadable |
 | `/anuncio-meta` | Campanha Meta Ads via MCP `meta-ads` |
@@ -109,15 +109,32 @@ Dentro de qualquer pasta de cliente, digite `/` no Claude Code:
 ## Como criar um novo cliente
 
 ```bash
-cp -r cliente-piloto clientes/nome-do-cliente
-cd clientes/nome-do-cliente
-# preencha o CLAUDE.md e branding/guidelines.md
+bin/setup.sh <nome-do-cliente>
+cd ~/Documents/biz-os-<nome-do-cliente>
 claude
+# dentro do Claude Code:
+/instalar    # escolhe perfil + entrevista + adapta CLAUDE.md
 ```
 
 ## Estrutura de um cliente
 
-Ver `cliente-piloto/CLAUDE.md` seção 5.
+```
+.
+├── CLAUDE.md           ← cérebro persistente, adaptado ao perfil
+├── .agents/            ← schema das 40 skills do Corey
+├── .claude/            ← settings, hooks, slash commands
+├── _memoria/           ← memória estruturada (empresa, estratégia, preferências, user_role)
+├── identidade/         ← guidelines verbal + design-guide visual + logos
+├── dados/              ← inputs (transcricoes/, historico/)
+├── marketing/          ← outputs gerados (carrosseis/, ads/, conteudo/)
+├── produtos/           ← catálogo, fichas técnicas
+├── leads/              ← pipeline (gitignored)
+├── financeiro/         ← DRE, fluxo de caixa
+├── site/               ← código/conteúdo do site
+└── templates/          ← biblioteca local (perfis, identidade, ferramentas, skills)
+```
+
+Detalhes em `cliente-piloto/CLAUDE.md` seção 5.
 
 ## Referências externas
 
