@@ -1,13 +1,32 @@
 #!/usr/bin/env bash
 # Bootstrap do biz-os.
 # Instala plugins/skills oficiais e da comunidade num projeto-cliente.
-# Uso:   bin/setup.sh [diretorio-do-cliente]
-# Default: ./cliente-piloto
+#
+# Uso:
+#   bin/setup.sh                  # roda contra o template cliente-piloto/ (in-repo)
+#   bin/setup.sh <nome>           # cria/usa ~/Documents/biz-os-<nome> (fora do repo)
+#   bin/setup.sh <caminho/com/->  # caminho explícito (relativo ou absoluto)
+#
+# Override do diretório base dos clientes:
+#   BIZ_OS_CLIENTS_DIR=/outro/lugar bin/setup.sh <nome-do-cliente>
 
 set -euo pipefail
 
-PROJECT_DIR="${1:-cliente-piloto}"
+ARG="${1:-cliente-piloto}"
 TEMPLATE_DIR="cliente-piloto"
+CLIENTS_BASE="${BIZ_OS_CLIENTS_DIR:-$HOME/Documents}"
+
+# Resolve PROJECT_DIR:
+# - "cliente-piloto" → template in-repo
+# - contém "/" ou começa com "." ou "~" → caminho explícito
+# - caso contrário → $CLIENTS_BASE/biz-os-<nome>
+if [ "$ARG" = "$TEMPLATE_DIR" ]; then
+  PROJECT_DIR="$TEMPLATE_DIR"
+elif [[ "$ARG" == */* || "$ARG" == .* || "$ARG" == "~"* ]]; then
+  PROJECT_DIR="${ARG/#\~/$HOME}"
+else
+  PROJECT_DIR="$CLIENTS_BASE/biz-os-$ARG"
+fi
 
 if [ ! -f "$PROJECT_DIR/CLAUDE.md" ]; then
   if [ "$PROJECT_DIR" = "$TEMPLATE_DIR" ]; then
@@ -23,12 +42,13 @@ if [ ! -f "$PROJECT_DIR/CLAUDE.md" ]; then
     exit 1
   fi
   echo "📁 $PROJECT_DIR não existe — copiando do template $TEMPLATE_DIR/..."
+  mkdir -p "$(dirname "$PROJECT_DIR")"
   cp -r "$TEMPLATE_DIR" "$PROJECT_DIR"
   echo "✅ $PROJECT_DIR criado."
   echo ""
 fi
 
-cat <<'EOF'
+cat <<EOF
 ══════════════════════════════════════════════════════════════
 biz-os :: setup
 ══════════════════════════════════════════════════════════════
@@ -39,14 +59,12 @@ precisa colar dentro de uma sessão do Claude Code.
 
 Abra o Claude Code dentro do projeto:
 
-    cd PROJECT_DIR && claude
+    cd "$PROJECT_DIR" && claude
 
 E cole os comandos abaixo, na ordem:
 
 ══════════════════════════════════════════════════════════════
 EOF
-
-sed -i.bak "s|PROJECT_DIR|$PROJECT_DIR|g" /dev/stdout 2>/dev/null || true
 
 cat <<EOF
 

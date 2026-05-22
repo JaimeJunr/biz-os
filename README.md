@@ -33,7 +33,18 @@ npm install -g @anthropic-ai/claude-code
 ### 2. Setup automatizado (recomendado)
 
 ```bash
+# nome puro → cria ~/Documents/biz-os-<nome> a partir do template
+bin/setup.sh <nome-do-cliente>
+
+# template in-repo
 bin/setup.sh cliente-piloto
+
+# caminho explícito (contém "/", "." ou "~")
+bin/setup.sh ./clientes/foo
+bin/setup.sh ~/projetos/foo
+
+# override do diretório base
+BIZ_OS_CLIENTS_DIR=/srv/clientes bin/setup.sh <nome-do-cliente>
 ```
 
 Imprime os comandos de plugin na ordem correta. Cole dentro da sessão do Claude Code.
