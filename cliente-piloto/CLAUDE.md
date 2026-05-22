@@ -92,6 +92,10 @@ Definidos em `.claude/commands/`. Digite `/` no Claude Code para listar.
 | `/design <briefing>` | Orquestra stack de design (critique, criar, a11y, copy, handoff, research) |
 | `/lead-sync` | Puxa leads do Google Sheets → snapshot em `leads/` |
 | `/prompt-imagem <brief>` | Gera prompts on-brand pra Midjourney/Sora/DALL-E/Flux usando `identidade/design-guide.md` |
+| `/diagnostico` | Análise empresarial estruturada — nota 0-3 por dimensão, top 5 erros, top 5 oportunidades, roadmap revisado |
+| `/linktree` | Gera linktree on-brand (HTML estático) on-brand, mobile-first, sem assinatura |
+| `/quiz` | Quiz de qualificação de leads com tier matrix (A/B/C/X) + redirect WhatsApp + Google Sheet |
+| `/proposta <prospect>` | Proposta comercial estruturada (perfil agência/freelancer) com diagnóstico + escopo + preço opinado |
 | `/dre` | Lê/atualiza DRE em `financeiro/dre.xlsx` |
 | `/fluxo-caixa` | Lança/projeta fluxo de caixa |
 

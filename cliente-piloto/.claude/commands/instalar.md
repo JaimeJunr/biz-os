@@ -260,6 +260,12 @@ Pra começar hoje:
 
 > **Dica de sugestão:** se o cliente vai produzir imagens em ferramenta externa (Midjourney, Sora, nano-banana, DALL-E, Flux), inclua `/prompt-imagem` na lista de 3 commands — ele puxa `identidade/design-guide.md` + `_memoria/preferencias.md` e gera prompts on-brand prontos pra colar. Útil sobretudo na fase de teste de moodboard ou geração de hero/lifestyle pré-foto-shoot.
 
+> **Sugira `/diagnostico` quando:** acabou de rodar o `/instalar` e o usuário quer panorama completo dos gaps (não só do que foi entrevistado). É a melhor entrada pro segundo encontro.
+
+> **Sugira `/linktree` + `/quiz` quando:** o cliente está em pré-lançamento, não tem site no ar e quer captura imediata via bio do Instagram.
+
+> **Sugira `/proposta` quando:** o perfil é agência/freelancer e o operador do biz-os mencionou um prospect específico em pipeline.
+
 ### 5e) Teste de fumaça
 
 Sugira uma frase exata pra testar que as 40 skills do Corey estão lendo `.agents/product-marketing.md`:

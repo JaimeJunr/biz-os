@@ -104,6 +104,10 @@ Dentro de qualquer pasta de cliente, digite `/` no Claude Code:
 | `/design` | Stack de design: critique, criar UI, a11y WCAG, UX writing, handoff, research |
 | `/lead-sync` | Sync Google Sheets → `leads/snapshot.csv` |
 | `/prompt-imagem` | Gera prompts on-brand pra Midjourney/Sora/DALL-E/Flux (lê `identidade/design-guide.md`) |
+| `/diagnostico` | Análise empresarial estruturada — notas 0-3, top 5 erros + top 5 oportunidades, roadmap revisado |
+| `/linktree` | Linktree estático on-brand (HTML, sem assinatura) |
+| `/quiz` | Quiz de qualificação com tier matrix + redirect WhatsApp + Google Sheet via Apps Script |
+| `/proposta` | Proposta comercial estruturada (perfil agência/freelancer) com escopo e preço opinado |
 | `/dre` | DRE em xlsx |
 | `/fluxo-caixa` | Fluxo de caixa + projeção |
 
