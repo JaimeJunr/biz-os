@@ -7,10 +7,25 @@
 set -euo pipefail
 
 PROJECT_DIR="${1:-cliente-piloto}"
+TEMPLATE_DIR="cliente-piloto"
 
 if [ ! -f "$PROJECT_DIR/CLAUDE.md" ]; then
-  echo "❌ $PROJECT_DIR/CLAUDE.md não encontrado. Rode a partir da raiz do biz-os."
-  exit 1
+  if [ "$PROJECT_DIR" = "$TEMPLATE_DIR" ]; then
+    echo "❌ template $TEMPLATE_DIR/CLAUDE.md não encontrado. Rode a partir da raiz do biz-os."
+    exit 1
+  fi
+  if [ ! -d "$TEMPLATE_DIR" ]; then
+    echo "❌ template $TEMPLATE_DIR/ não encontrado. Rode a partir da raiz do biz-os."
+    exit 1
+  fi
+  if [ -e "$PROJECT_DIR" ]; then
+    echo "❌ $PROJECT_DIR já existe mas não tem CLAUDE.md. Remova ou escolha outro nome."
+    exit 1
+  fi
+  echo "📁 $PROJECT_DIR não existe — copiando do template $TEMPLATE_DIR/..."
+  cp -r "$TEMPLATE_DIR" "$PROJECT_DIR"
+  echo "✅ $PROJECT_DIR criado."
+  echo ""
 fi
 
 cat <<'EOF'
