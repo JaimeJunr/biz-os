@@ -133,8 +133,9 @@ Uma chamada com:
 1. Leia `templates/perfis/<perfil-escolhido>.md`.
 2. Substitua `{{NOME_DO_CLIENTE}}` pelo nome do bloco 2.1.
 3. Preencha o que conseguir das seções 1-4, 8 com base no que foi coletado.
-4. Sobrescreva `CLAUDE.md` na raiz.
-5. Mantenha `[PENDENTE]` no que não foi respondido.
+4. **Concatene** o conteúdo de `templates/perfis/_comportamento.md` no fim (logo após a seção 8). Esse snippet contém as regras de atualização automática de memória, mudança de plano explicitada, bifurcação opinada — comportamento contínuo idêntico entre os 4 perfis.
+5. Sobrescreva `CLAUDE.md` na raiz com o resultado.
+6. Mantenha `[PENDENTE]` no que não foi respondido.
 
 ---
 
