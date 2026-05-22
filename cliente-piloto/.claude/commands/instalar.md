@@ -257,6 +257,8 @@ Pra começar hoje:
    Output: 3 paletas + justificativa em chat.
 ```
 
+> **Dica de sugestão:** se o cliente vai produzir imagens em ferramenta externa (Midjourney, Sora, nano-banana, DALL-E, Flux), inclua `/prompt-imagem` na lista de 3 commands — ele puxa `identidade/design-guide.md` + `_memoria/preferencias.md` e gera prompts on-brand prontos pra colar. Útil sobretudo na fase de teste de moodboard ou geração de hero/lifestyle pré-foto-shoot.
+
 ### 5e) Teste de fumaça
 
 Sugira uma frase exata pra testar que as 40 skills do Corey estão lendo `.agents/product-marketing.md`:

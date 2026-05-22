@@ -103,6 +103,7 @@ Dentro de qualquer pasta de cliente, digite `/` no Claude Code:
 | `/seo` | Auditoria SEO on-page + plano |
 | `/design` | Stack de design: critique, criar UI, a11y WCAG, UX writing, handoff, research |
 | `/lead-sync` | Sync Google Sheets → `leads/snapshot.csv` |
+| `/prompt-imagem` | Gera prompts on-brand pra Midjourney/Sora/DALL-E/Flux (lê `identidade/design-guide.md`) |
 | `/dre` | DRE em xlsx |
 | `/fluxo-caixa` | Fluxo de caixa + projeção |
 

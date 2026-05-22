@@ -91,6 +91,7 @@ Definidos em `.claude/commands/`. Digite `/` no Claude Code para listar.
 | `/seo <url>` | Auditoria SEO on-page + plano priorizado |
 | `/design <briefing>` | Orquestra stack de design (critique, criar, a11y, copy, handoff, research) |
 | `/lead-sync` | Puxa leads do Google Sheets → snapshot em `leads/` |
+| `/prompt-imagem <brief>` | Gera prompts on-brand pra Midjourney/Sora/DALL-E/Flux usando `identidade/design-guide.md` |
 | `/dre` | Lê/atualiza DRE em `financeiro/dre.xlsx` |
 | `/fluxo-caixa` | Lança/projeta fluxo de caixa |
 
