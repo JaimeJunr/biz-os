@@ -99,7 +99,7 @@ Regras de atualização:
   `> Atualizado em YYYY-MM-DD com base em <fonte: print/transcrição/conversa>`
 - Se a info é qualitativa (voz, frase verbatim, mudança de tom), vai pra `_memoria/preferencias.md` ou `identidade/guidelines.md`.
 - Se é quantitativa (número, ranking, métrica), vai pra `_memoria/estrategia.md` § Prova social numérica, e o arquivo cru pode ir em `dados/historico/`.
-- Se é referência visual (print, foto, moodboard), salve o registro em `dados/referencias-visuais.md` com data + descrição. O arquivo binário vai em `dados/refs/` ou subdir específico (`dados/empreendimentos/<nome>/` etc.) — crie a pasta se não existir.
+- Se é referência visual (print, foto, moodboard), salve o registro em `dados/referencias-visuais.md` com data + descrição. O arquivo binário vai em `dados/refs/` ou subdir específico (`dados/empreendimentos/<nome>/`, `dados/clientes/<nome>/`, `dados/concorrentes/<nome>/` etc.) — crie a pasta se não existir, seguindo as convenções de `dados/README.md`. Quando um subprojeto acumula 3+ arquivos relacionados, crie um `README.md` curto no subdir explicando o contexto.
 - Se é decisão aprovada (logo, paleta, copy), atualize o arquivo de destino com `**Status:** aprovado em YYYY-MM-DD` no item afetado.
 
 No final da resposta, liste em uma linha curta o que mudou:
