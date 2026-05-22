@@ -47,38 +47,34 @@ bin/setup.sh ~/projetos/foo
 BIZ_OS_CLIENTS_DIR=/srv/clientes bin/setup.sh <nome-do-cliente>
 ```
 
-Imprime os comandos de plugin na ordem correta. Cole dentro da sessão do Claude Code.
+Copia o template e configura o cliente. Plugins/marketplaces são **pré-declarados** em `.claude/settings.json` (campos `extraKnownMarketplaces` + `enabledPlugins`), então o Claude Code prompta a instalação na primeira sessão — sem cola-cola de `/plugin install`.
 
-### 3. Setup manual — base de marketing PRIMEIRO
+### 3. Setup manual (raro — só se quiser instalar fora do auto-prompt)
 
-A ordem importa: o plugin do Corey é a base, instale antes dos outros.
+Dentro de uma sessão do Claude Code, um comando por linha:
 
 ```
-# BASE — 40 skills, le .agents/product-marketing.md
 /plugin marketplace add coreyhaines31/marketingskills
 /plugin install marketing-skills@marketingskills
 
-# Camada Anthropic oficial
 /plugin marketplace add anthropics/skills
 /plugin install document-skills@anthropic-agent-skills
 /plugin install brand-guidelines@anthropic-agent-skills
 /plugin install skill-creator@anthropic-agent-skills
 /plugin install mcp-builder@anthropic-agent-skills
+/plugin install frontend-design@anthropic-agent-skills
 
-# DESIGN STACK
-# Anthropic Design (oficial verificado)
 /plugin marketplace add anthropics/claude-plugins-official
 /plugin install design@claude-plugins-official
-# Frontend Design (760k+ installs)
-/plugin install frontend-design@anthropic-agent-skills
-# UI UX Pro Max (81k+ stars)
+
 /plugin marketplace add nextlevelbuilder/ui-ux-pro-max-skill
 /plugin install ui-ux-pro-max@ui-ux-pro-max-skill
 
-# Complementares
 /plugin marketplace add OpenClaudia/openclaudia-skills
 /plugin marketplace add BrianRWagner/ai-marketing-claude-code-skills
 ```
+
+> Atenção: o Claude Code interpreta slash commands linha por linha. Não cole o bloco inteiro de uma vez — a segunda linha vira argumento da primeira.
 
 ### 4. MCPs
 

@@ -17,6 +17,36 @@
     ],
     "deny": []
   },
+  "extraKnownMarketplaces": {
+    "marketingskills": {
+      "source": { "source": "github", "repo": "coreyhaines31/marketingskills" }
+    },
+    "anthropic-agent-skills": {
+      "source": { "source": "github", "repo": "anthropics/skills" }
+    },
+    "claude-plugins-official": {
+      "source": { "source": "github", "repo": "anthropics/claude-plugins-official" }
+    },
+    "ui-ux-pro-max-skill": {
+      "source": { "source": "github", "repo": "nextlevelbuilder/ui-ux-pro-max-skill" }
+    },
+    "openclaudia-skills": {
+      "source": { "source": "github", "repo": "OpenClaudia/openclaudia-skills" }
+    },
+    "ai-marketing-claude-code-skills": {
+      "source": { "source": "github", "repo": "BrianRWagner/ai-marketing-claude-code-skills" }
+    }
+  },
+  "enabledPlugins": {
+    "marketing-skills@marketingskills": true,
+    "document-skills@anthropic-agent-skills": true,
+    "brand-guidelines@anthropic-agent-skills": true,
+    "skill-creator@anthropic-agent-skills": true,
+    "mcp-builder@anthropic-agent-skills": true,
+    "frontend-design@anthropic-agent-skills": true,
+    "design@claude-plugins-official": true,
+    "ui-ux-pro-max@ui-ux-pro-max-skill": true
+  },
   "mcpServers": {
     "filesystem": {
       "command": "npx",
@@ -80,28 +110,5 @@
         "OPENAPI_MCP_HEADERS": "{\"Authorization\":\"Bearer ${NOTION_TOKEN}\",\"Notion-Version\":\"2022-06-28\"}"
       }
     }
-  },
-  "_skills": {
-    "_comment": "Skills sao instaladas via /plugin marketplace e /plugin install. Lista abaixo eh referencia. Rode bin/setup.sh na raiz do biz-os para instalar tudo de uma vez.",
-    "base_marketing": [
-      "coreyhaines31/marketingskills :: PLUGIN BASE — 40 skills, le .agents/product-marketing.md"
-    ],
-    "oficiais_anthropic": [
-      "anthropics/skills :: document-skills (docx, xlsx, pptx, pdf)",
-      "anthropics/skills :: brand-guidelines",
-      "anthropics/skills :: skill-creator",
-      "anthropics/skills :: mcp-builder",
-      "anthropics/skills :: doc-coauthoring",
-      "anthropics/skills :: internal-comms"
-    ],
-    "design_stack": [
-      "anthropics/claude-plugins-official :: design (critique, ux-writing, a11y, research, dev handoff)",
-      "anthropics/skills :: frontend-design (760k+ installs)",
-      "nextlevelbuilder/ui-ux-pro-max-skill (81k+ stars, 161 reasoning rules, 67 UI styles)"
-    ],
-    "comunidade_complementar": [
-      "OpenClaudia/openclaudia-skills",
-      "BrianRWagner/ai-marketing-claude-code-skills"
-    ]
   }
 }
